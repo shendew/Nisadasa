@@ -35,25 +35,26 @@
                 android:paddingBottom="20dp">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Randu"
+                    android:text="..."
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/txt_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="2023.04.9 10.00 am" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/txt_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="SimpleText is the native text editor for the Apple classic Mac OS. SimpleText allows text editing and text formatting, fonts, and sizes. It was developed to integrate the features included in the diff"
+                    android:text="..."
                     android:textColor="@color/black" />
             </LinearLayout>
 
