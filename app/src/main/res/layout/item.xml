@@ -24,7 +24,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:src="@drawable/user" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingBottom="20dp">
+                >
 
                 <TextView
                     android:id="@+id/txt_name"
@@ -49,23 +49,30 @@
                     android:layout_height="wrap_content"
                     android:text="2023.04.9 10.00 am" />
 
-                <TextView
-                    android:id="@+id/txt_desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="..."
-                    android:textColor="@color/black" />
+
             </LinearLayout>
 
+
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="..."
+            android:layout_below="@id/cont"
+            android:paddingBottom="20dp"
+            android:textColor="@color/black" />
+
 
         <ImageView
             android:id="@+id/Eheart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/icon__heart_"
-            android:layout_below="@id/cont"
+            android:layout_below="@id/txt_desc"
             android:layout_marginLeft="10dp"/>
 
         <ImageView
@@ -73,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/icon__heart__f"
-            android:layout_below="@id/cont"
+            android:layout_below="@id/txt_desc"
             android:layout_marginLeft="10dp"/>
 
         <ImageView
@@ -81,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/icon__bookmark_"
-            android:layout_below="@id/cont"
+            android:layout_below="@id/txt_desc"
             android:layout_toEndOf="@id/Eheart"
             android:layout_marginLeft="20dp"/>
 
@@ -90,8 +97,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/icon__bookmark_f"
-            android:layout_below="@id/cont"
-            android:layout_toEndOf="@id/Fheart"
+            android:layout_below="@id/txt_desc"
+            android:layout_toEndOf="@id/Eheart"
             android:layout_marginLeft="20dp"/>
 
         <ImageView
@@ -100,7 +107,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/icon__share_f"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/cont"
+            android:layout_below="@id/txt_desc"
             android:layout_marginRight="10dp"/>
     </RelativeLayout>
 

@@ -1,6 +1,8 @@
 package com.kingdew.nisadasa.adapters;
 
 import android.content.Context;
+import android.os.Build;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,11 @@ public class homeAdapter extends RecyclerView.Adapter<homeAdapter.ViewHolder> {
         holder.name.setText(item.getName());
         holder.date.setText(item.getDate());
         holder.desc.setText(item.getDesc());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            holder.desc.setText(Html.fromHtml(item.getDesc(), Html.FROM_HTML_MODE_COMPACT));
+        } else {
+            holder.desc.setText(Html.fromHtml(item.getDesc()));
+        }
     }
 
     @Override
