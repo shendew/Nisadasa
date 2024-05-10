@@ -274,7 +274,7 @@ public class homeNAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 public void onClick(View view) {
 
                     try {
-                        ShareAny shareAny=new ShareAny(context,item.getDesc());
+                        ShareAny shareAny=new ShareAny(context,item.getDesc().replace("<br>"," "));
                         myTask=shareAny.execute(new URL(item.getImage()));
                     } catch (MalformedURLException e) {
                         throw new RuntimeException(e);
