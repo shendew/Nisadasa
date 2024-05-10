@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
 
                 if(CheckAppIsOpenFirstTimeOrNot()){
-                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    startActivity(new Intent(MainActivity.this,HomeActivity.class));
                 }
                 else {
                     startActivity(new Intent(MainActivity.this,HomeActivity.class));
 
                 }
+                finish();
             }
         },500);
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:contentPadding="10dp"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true"
     >
 
@@ -18,13 +18,15 @@
             android:id="@+id/cont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/user" />
+                android:src="@drawable/user"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,7 +49,8 @@
                     android:id="@+id/txt_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2023.04.9 10.00 am" />
+                    android:text="2023.04.9 10.00 am"
+                    android:visibility="gone" />
 
 
             </LinearLayout>
@@ -56,50 +59,65 @@
 
         </LinearLayout>
 
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cont"
+            />
+
+
         <TextView
             android:id="@+id/txt_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="..."
-            android:layout_below="@id/cont"
+            android:layout_below="@id/img"
             android:paddingBottom="20dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:maxLines="50"
+            />
 
 
         <ImageView
             android:id="@+id/Eheart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon__heart_"
             android:layout_below="@id/txt_desc"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon__heart_" />
 
         <ImageView
             android:id="@+id/Fheart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon__heart__f"
             android:layout_below="@id/txt_desc"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon__heart__f" />
 
         <ImageView
             android:id="@+id/Esav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon__bookmark_"
             android:layout_below="@id/txt_desc"
+            android:layout_marginLeft="20dp"
             android:layout_toEndOf="@id/Eheart"
-            android:layout_marginLeft="20dp"/>
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon__bookmark_" />
 
         <ImageView
             android:id="@+id/Fsave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon__bookmark_f"
             android:layout_below="@id/txt_desc"
+            android:layout_marginLeft="20dp"
             android:layout_toEndOf="@id/Eheart"
-            android:layout_marginLeft="20dp"/>
+            android:visibility="gone"
+            app:srcCompat="@drawable/icon__bookmark_f" />
 
         <ImageView
             android:id="@+id/share"
